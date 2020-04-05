@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>DESAFIO SEFAZ</title>
+
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:dialog header="Desafio Sefaz" modal="true" height="150"
+			visible="true">
+			<p:panelGrid columns="2">
+				<h:outputLabel value="Usuario :" />
+				<p:inputText value="#{LoginBean.usuarioInpt}" />
+				<h:outputLabel value="Senha :" />
+				<p:password value="#{LoginBean.senhaInpt}" />
+				<p:commandButton value="Entrar" update="@form"
+					actionListener="#{LoginBean.entrar}" />
+				<h:outputLabel value="#{LoginBean.mensagem}" style="color: red" />
+			</p:panelGrid>
+		</p:dialog>
+	</h:form>
+</h:body>
+</html>
